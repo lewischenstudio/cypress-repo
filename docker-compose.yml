@@ -1,0 +1,10 @@
+services:
+  cypress-tets:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cypress-tests-image
+    env_file:
+      - .env
+    volumes:
+      - ./cypress/reports:/app/cypress/reports

@@ -1,0 +1,46 @@
+{
+  "name": "vite-cypress",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "cy": "cypress run",
+    "cy:e2e": "cypress run --browser chrome",
+    "cy:open": "cypress open",
+    "cy:run:all": "npm run prereport && npx cypress run || true && npm run junit:merge",
+    "delete:reports": "rm -r cypress/reports/* || true",
+    "prereport": "npm run delete:reports",
+    "junit:merge": "npx junit-merge -d ./cypress/reports/junit -o ./cypress/reports/junit/report.xml"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@cypress/grep": "^6.0.0",
+    "@eslint/js": "^9.39.1",
+    "@faker-js/faker": "^9.9.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "cypress": "^15.11.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.4",
+    "cypress-multi-reporters": "^2.0.5",
+    "dotenv": "^17.3.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "junit-merge": "^2.0.0",
+    "mocha-junit-reporter": "^2.2.1",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.48.0",
+    "vite": "^7.3.1"
+  }
+}

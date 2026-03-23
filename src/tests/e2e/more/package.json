@@ -1,0 +1,17 @@
+{
+  "name": "more-cypress",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "cy": "cypress run",
+    "cy:e2e": "cypress run --browser chrome",
+    "cy:open": "cypress open",
+    "cypress:smoke-firefox:": "npx cypress run --spec 'src/tests/web-ui/checkboxes.e2e-cy.ts' --browser firefox",
+    "cypress:smoke-chrome:": "npx cypress run --spec 'src/tests/web-ui/checkboxes.e2e-cy.ts' --browser chrome",
+    "cypress:smoke-all": "npm run cypress:smoke-firefox && npm run cypress:smoke-chrome",
+    "cy_run_dev": "npx cypress open --env username='helloDev@test.com',password='123321'",
+    "cy_run_QA": "npx cypress open --env username='helloQA@test.com',password='321123'",
+    "cy_run_dev_file": "npx cypress open --config-file cypress.dev.config"
+  }
+}

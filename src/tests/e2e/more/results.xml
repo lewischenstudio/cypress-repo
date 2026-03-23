@@ -1,0 +1,397 @@
+<?xml version="1.0"?>
+<testsuites>
+<testsuite name="Root Suite" timestamp="2026-03-18T00:19:55" tests="1" file="src\tests\api\workingWithAPIs.api-cy.ts" time="2.228" failures="0">
+  
+  <testcase name="first test" time="1.274" classname="first test"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:21:57" tests="1" file="src\tests\web-ui\webTables.e2e-cy.ts" time="6.356" failures="0">
+  
+  <testcase name="web tables" time="6.316" classname="web tables"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:19:47" tests="1" file="src\tests\api\testingApi.api-cy.ts" time="2.075" failures="1">
+  
+  <testcase name="delete article" time="0.413" classname="delete article">
+    
+    <failure message="`cy.request()` failed on:
+
+https://conduit-api.bondaracademy.com/api/articles/
+
+The response we received from your web server was:
+
+  &gt; 422: Unprocessable Entity
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: POST
+URL: https://conduit-api.bondaracademy.com/api/articles/
+Headers: {
+  &quot;Connection&quot;: &quot;keep-alive&quot;,
+  &quot;Authorization&quot;: &quot;Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo0OTI0N30sImlhdCI6MTc3Mzc5MzE4OSwiZXhwIjoxNzc4OTc3MTg5fQ.kYI8yQDtuK6VA7_DjjG1vyXfTH0OHEkiRveOhuMOqss&quot;,
+  &quot;user-agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.0.0 Safari/537.36&quot;,
+  &quot;accept&quot;: &quot;*/*&quot;,
+  &quot;accept-encoding&quot;: &quot;gzip, deflate&quot;,
+  &quot;content-type&quot;: &quot;application/json&quot;,
+  &quot;content-length&quot;: 112
+}
+Body: {&quot;article&quot;:{&quot;title&quot;:&quot;Test title Cypress&quot;,&quot;description&quot;:&quot;Some description&quot;,&quot;body&quot;:&quot;This is a body&quot;,&quot;tagList&quot;:[]}}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 422 - Unprocessable Entity
+Headers: {
+  &quot;x-powered-by&quot;: &quot;Express&quot;,
+  &quot;vary&quot;: &quot;Origin&quot;,
+  &quot;content-type&quot;: &quot;application/json; charset=utf-8&quot;,
+  &quot;etag&quot;: &quot;W/\&quot;27-BNeuaWQ7DHvW/r+pl+qdJiF06Is\&quot;&quot;,
+  &quot;x-cloud-trace-context&quot;: &quot;7ce2ba0415a3f27d5492ec7e9677f2c7&quot;,
+  &quot;date&quot;: &quot;Wed, 18 Mar 2026 00:19:49 GMT&quot;,
+  &quot;server&quot;: &quot;Google Frontend&quot;,
+  &quot;content-length&quot;: &quot;39&quot;
+}
+Body: {
+  &quot;errors&quot;: {
+    &quot;title&quot;: [
+      &quot;must be unique&quot;
+    ]
+  }
+}
+
+
+https://on.cypress.io/request" type="CypressError"><![CDATA[CypressError: `cy.request()` failed on:
+
+https://conduit-api.bondaracademy.com/api/articles/
+
+The response we received from your web server was:
+
+  > 422: Unprocessable Entity
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: POST
+URL: https://conduit-api.bondaracademy.com/api/articles/
+Headers: {
+  "Connection": "keep-alive",
+  "Authorization": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo0OTI0N30sImlhdCI6MTc3Mzc5MzE4OSwiZXhwIjoxNzc4OTc3MTg5fQ.kYI8yQDtuK6VA7_DjjG1vyXfTH0OHEkiRveOhuMOqss",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.0.0 Safari/537.36",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "content-type": "application/json",
+  "content-length": 112
+}
+Body: {"article":{"title":"Test title Cypress","description":"Some description","body":"This is a body","tagList":[]}}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 422 - Unprocessable Entity
+Headers: {
+  "x-powered-by": "Express",
+  "vary": "Origin",
+  "content-type": "application/json; charset=utf-8",
+  "etag": "W/\"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is\"",
+  "x-cloud-trace-context": "7ce2ba0415a3f27d5492ec7e9677f2c7",
+  "date": "Wed, 18 Mar 2026 00:19:49 GMT",
+  "server": "Google Frontend",
+  "content-length": "39"
+}
+Body: {
+  "errors": {
+    "title": [
+      "must be unique"
+    ]
+  }
+}
+
+
+https://on.cypress.io/request
+    at <unknown> (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:136430:72)
+    at tryCatcher (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:1777:23)
+    at Promise._settlePromiseFromHandler (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:1489:31)
+    at Promise._settlePromise (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:1546:18)
+    at Promise._settlePromise0 (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:1591:10)
+    at Promise._settlePromises (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:1671:18)
+    at _drainQueueStep (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:2377:12)
+    at _drainQueue (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:2370:9)
+    at Async._drainQueues (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:2386:5)
+    at Async.drainQueues (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:2256:14)
+From Your Spec Code:
+    at Context.eval (webpack://vite-cypress/./src/tests/e2e/api/testingApi.api-cy.ts:14:8)
+    at getRet (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:122806:20)
+    at tryCatcher (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:1777:23)
+    at Promise.attempt.Promise.try (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:4285:29)
+    at Context.thenFn (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:122817:66)
+    at Context.then (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:123068:21)
+    at wrapped (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:146326:19)]]></failure>
+    
+  </testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:19:29" tests="1" file="src\tests\api\apiHeadlessAuthorization.api-cy.ts" time="4.350" failures="0">
+  
+  <testcase name="delete article" time="2.492" classname="delete article"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:20:06" tests="1" file="src\tests\web-elements\childElements.e2e-cy.ts" time="1.134" failures="0">
+  
+  <testcase name="Child Elements" time="1.096" classname="Child Elements"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:19:50" tests="1" file="src\tests\api\waitingForApiCalls.api-cy.ts" time="4.252" failures="1">
+  
+  <testcase name="waiting for apis" time="1.926" classname="waiting for apis">
+    
+    <failure message="expected &apos;Test title Cypress&apos; to include &apos;Bondar Academy&apos;" type="AssertionError"><![CDATA[AssertionError: expected 'Test title Cypress' to include 'Bondar Academy'
+    at Context.eval (webpack://vite-cypress/./src/tests/e2e/api/waitingForApiCalls.api-cy.ts:5:65)
+    at getRet (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:122806:20)
+    at tryCatcher (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:1777:23)
+    at Promise.attempt.Promise.try (https://conduit.bondaracademy.com/__cypress/runner/cypress_runner.js:4285:29)]]></failure>
+    
+  </testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:21:29" tests="1" file="src\tests\web-ui\dialogBoxes.e2e-cy.ts" time="1.723" failures="0">
+  
+  <testcase name="dialog boxes" time="1.699" classname="dialog boxes"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:20:08" tests="1" file="src\tests\web-elements\cypressChains.e2e-cy.ts" time="1.321" failures="0">
+  
+  <testcase name="Cypress Chains" time="1.293" classname="Cypress Chains"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:20:04" tests="1" file="src\tests\web-elements\assertionsAndRetry.e2e-cy.ts" time="1.271" failures="0">
+  
+  <testcase name="Assertions" time="1.233" classname="Assertions"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:21:32" tests="1" file="src\tests\web-ui\dragAndDrop.e2e-cy.ts" time="1.559" failures="0">
+  
+  <testcase name="drag and drop" time="1.535" classname="drag and drop"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:19:58" tests="2" file="src\tests\page-object\pageObjects.e2e-cy.ts" time="4.373" failures="0">
+  
+  <testcase name="navigation test" time="1.883" classname="navigation test"></testcase>
+  
+  <testcase name="test with page object" time="2.450" classname="test with page object"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:20:15" tests="1" file="src\tests\web-elements\locatorSyntaxRules.e2e-cy.ts" time="10.377" failures="1">
+  
+  <testcase name="&quot;before each&quot; hook: Open test application for &quot;Hello world 1&quot;" time="5.620" classname="&quot;before each&quot; hook: Open test application for &quot;Hello world 1&quot;">
+    
+    <failure message="Timed out retrying after 4050ms: `cy.click()` failed because this element:
+
+`&lt;a class=&quot;ng-tns-c99-3 ng-star-inserted active&quot; title=&quot;Form Layouts&quot; href=&quot;/pages/forms/layouts&quot;&gt;...&lt;/a&gt;`
+
+is being covered by another element:
+
+`&lt;a href=&quot;#&quot; class=&quot;ng-tns-c99-5 ng-star-inserted&quot; title=&quot;Modal &amp;amp; Overlays&quot; aria-expanded=&quot;false&quot;&gt;...&lt;/a&gt;`
+
+Fix this problem, or use {force: true} to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with
+
+Because this error occurred during a `before each` hook we are skipping all of the remaining tests." type="CypressError"><![CDATA[CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:
+
+`<a class="ng-tns-c99-3 ng-star-inserted active" title="Form Layouts" href="/pages/forms/layouts">...</a>`
+
+is being covered by another element:
+
+`<a href="#" class="ng-tns-c99-5 ng-star-inserted" title="Modal &amp; Overlays" aria-expanded="false">...</a>`
+
+Fix this problem, or use {force: true} to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with
+
+Because this error occurred during a `before each` hook we are skipping all of the remaining tests.
+    at ensureIsDescendent (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:115162:68)
+    at ensureDescendents (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:115213:5)
+    at ensureDescendentsAndScroll (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:115219:14)
+    at ensureElIsNotCovered (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:115350:5)
+    at runAllChecks (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:115549:52)
+    at retryActionability (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:115586:16)
+    at tryCatcher (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:1777:23)
+    at Promise.attempt.Promise.try (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:4285:29)
+    at whenStable (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:152022:68)
+    at <unknown> (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:151963:14)
+    at tryCatcher (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:1777:23)
+    at Promise._settlePromiseFromHandler (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:1489:31)
+    at Promise._settlePromise (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:1546:18)
+    at Promise._settlePromise0 (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:1591:10)
+    at Promise._settlePromises (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:1671:18)
+    at Promise._fulfill (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:1615:18)
+    at <unknown> (https://playground.bondaracademy.com/__cypress/runner/cypress_runner.js:5420:46)
+From Your Spec Code:
+    at Context.eval (webpack://vite-cypress/./src/tests/e2e/web-elements/locatorSyntaxRules.e2e-cy.ts:4:30)]]></failure>
+    
+  </testcase>
+  
+</testsuite>
+
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:19:38" tests="1" file="src\tests\api\endToEnd.api-cy.ts" time="0.757" failures="0">
+  
+  <testcase name="api testing" time="0.741" classname="api testing"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:20:26" tests="1" file="src\tests\web-elements\parentElements.e2e-cy.ts" time="1.265" failures="0">
+  
+  <testcase name="Parent Elements" time="1.232" classname="Parent Elements"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:20:31" tests="1" file="src\tests\web-elements\timeouts.e2e-cy.ts" time="11.538" failures="0">
+  
+  <testcase name="Timeouts" time="11.516" classname="Timeouts"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:20:10" tests="1" file="src\tests\web-elements\cypressLocatorMethods.e2e-cy.ts" time="1.257" failures="0">
+  
+  <testcase name="Cypress Locator Methods" time="1.220" classname="Cypress Locator Methods"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:20:44" tests="4" file="src\tests\more\dataDrivenTesting.api-cy.ts" time="6.499" failures="0">
+  
+  <testcase name="data driven test: 12" time="1.817" classname="data driven test: 12"></testcase>
+  
+  <testcase name="data driven test: 123" time="0.797" classname="data driven test: 123"></testcase>
+  
+  <testcase name="data driven test: 12345678901234567890" time="0.965" classname="data driven test: 12345678901234567890"></testcase>
+  
+  <testcase name="data driven test: 12345678901234567890123456789012345678901" time="1.612" classname="data driven test: 12345678901234567890123456789012345678901"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:20:13" tests="1" file="src\tests\web-elements\extractingValues.e2e-cy.ts" time="1.522" failures="0">
+  
+  <testcase name="Extracting Values" time="1.501" classname="Extracting Values"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:21:49" tests="1" file="src\tests\web-ui\radioButtons.e2e-cy.ts" time="1.671" failures="0">
+  
+  <testcase name="radio buttons" time="1.647" classname="radio buttons"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:20:52" tests="1" file="src\tests\more\fakeTestData.api-cy.ts" time="9.275" failures="0">
+  
+  <testcase name="fake test data" time="1.547" classname="fake test data"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:21:55" tests="1" file="src\tests\web-ui\tooltips.e2e-cy.ts" time="1.787" failures="0">
+  
+  <testcase name="tooltips" time="1.763" classname="tooltips"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:21:03" tests="1" file="src\tests\more\retryTests.api-cy.ts" time="18.258" failures="1">
+  
+  <testcase name="retry tests" time="5.562" classname="retry tests">
+    
+    <failure message="Timed out retrying after 4000ms: expected &apos;&lt;app-favorite-button.pull-xs-right&gt;&apos; to contain text &apos;99999999&apos;, but the text was &apos; 9999999 &apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<app-favorite-button.pull-xs-right>' to contain text '99999999', but the text was ' 9999999 '
+    at Context.eval (webpack://vite-cypress/./src/tests/e2e/more/retryTests.api-cy.ts:10:40)
+
+      + expected - actual
+
+      -' 9999999 '
+      +'99999999']]></failure>
+    
+  </testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:21:26" tests="1" file="src\tests\web-ui\datepicker.e2e-cy.ts" time="1.976" failures="0">
+  
+  <testcase name="datepickers" time="1.956" classname="datepickers"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:21:45" tests="1" file="src\tests\web-ui\listAndDropdowns.e2e-cy.ts" time="3.368" failures="0">
+  
+  <testcase name="lists and dropdowns" time="3.346" classname="lists and dropdowns"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:21:37" tests="1" file="src\tests\web-ui\inputFields.e2e-cy.ts" time="6.426" failures="0">
+  
+  <testcase name="input fields" time="6.406" classname="input fields"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:20:29" tests="1" file="src\tests\web-elements\reusingLocators.e2e-cy.ts" time="1.264" failures="0">
+  
+  <testcase name="Reusing Locators" time="1.253" classname="Reusing Locators"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:21:34" tests="1" file="src\tests\web-ui\iframes.e2e-cy.ts" time="2.096" failures="0">
+  
+  <testcase name="iframes" time="2.069" classname="iframes"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:19:44" tests="1" file="src\tests\api\routerMatcher.api-cy.ts" time="2.454" failures="0">
+  
+  <testcase name="first test" time="1.398" classname="first test"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:21:23" tests="1" file="src\tests\web-ui\checkboxes.e2e-cy.ts" time="2.001" failures="0">
+  
+  <testcase name="checkboxes" time="1.977" classname="checkboxes"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:19:40" tests="1" file="src\tests\api\modifyApiResponse.api-cy.ts" time="2.813" failures="0">
+  
+  <testcase name="modify api response" time="1.840" classname="modify api response"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:19:35" tests="1" file="src\tests\api\apiMocking.api-cy.ts" time="2.295" failures="0">
+  
+  <testcase name="first test" time="1.263" classname="first test"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-03-18T00:21:52" tests="1" file="src\tests\web-ui\sliders.e2e-cy.ts" time="1.853" failures="0">
+  
+  <testcase name="sliders" time="1.838" classname="sliders"></testcase>
+  
+</testsuite>
+
+</testsuites>
