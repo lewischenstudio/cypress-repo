@@ -35,7 +35,7 @@ export default defineConfig({
       runMode: 1, // Retry 1 more time in regression / CI/CD testing
     },
     fixturesFolder: "src/tests/fixtures",
-    specPattern: "src/**/*.api-cy.{js,jsx,ts,tsx}",
+    specPattern: "src/**/*.(api|e2e)-cy.{js,jsx,ts,tsx}",
     supportFile: "cypress/support/e2e.ts",
     reporter: "cypress-multi-reporters",
     reporterOptions: {
